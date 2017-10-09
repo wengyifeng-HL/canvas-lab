@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>绘制矩形</title>
+
+<style>
+    #cv {
+        border: 1px solid #999;
+    }
+</style>
+</head>
+<body onload="draw();">
+    
+    <canvas id="cv" width="200" height="200"></canvas>
+
+<script>
+   function draw() {
+       var canvas = document.getElementById('cv');
+       if (canvas.getContext) {
+           var ctx = canvas.getContext('2d');
+           
+           // 绘制一个填充的矩形
+           ctx.fillRect(25, 25, 100, 100);
+           // 清除指定矩形区域（清除后为透明）
+           ctx.clearRect(45, 45, 60, 60);
+           // 绘制一个矩形的边框
+           ctx.strokeRect(50, 50, 50, 50);
+       }
+   }
+</script>
+</body>
+</html>
