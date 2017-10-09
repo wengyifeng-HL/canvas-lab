@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>basic usage</title>
+
+<style>
+    #cv {
+        border: 1px solid #999;
+    }
+</style>
+</head>
+<body onload="draw();">
+    
+    <canvas id="cv" width="200" height="200"></canvas>
+
+<script>
+   function draw() {
+       var canvas = document.getElementById('cv');
+       // 是否支持 canvas
+       if (canvas.getContext) {
+           // 渲染上下文
+           var ctx = canvas.getContext('2d');
+           
+           // 绘制一个矩形，设置填充颜色，偏移位置及宽高 
+           ctx.fillStyle = "rgb(200, 0, 0)";
+           ctx.fillRect(10, 10, 50, 50);
+
+           // 绘制另一个矩形，设置填充颜色，偏移位置及宽高
+           ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+           ctx.fillRect(35, 35, 50, 50);
+       }
+   }
+</script>
+</body>
+</html>
